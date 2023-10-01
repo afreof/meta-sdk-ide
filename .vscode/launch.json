@@ -1,0 +1,72 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: bitbake -T-1 --server-only",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/bitbake/bin/bitbake",
+            "args": ["-T-1", "--server-only", "-DDD"],
+            "cwd": "${workspaceFolder}/build",
+            "envFile": "${workspaceFolder}/oe-init-build-env",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: devtool ide cmake-example core-image-minimal -t root@192.168.7.2 -c --skip-bitbake --debug-build-config",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/devtool",
+            "args": [
+                "ide",
+                "cmake-example",
+                "core-image-minimal",
+                "-c",
+                "--skip-bitbake",
+                "--debug-build-config"
+            ],
+            "cwd": "${workspaceFolder}/build",
+            "envFile": "${workspaceFolder}/build/.buildenv",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: devtool ide meson-example core-image-minimal -t root@192.168.7.2 -c --skip-bitbake",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/devtool",
+            "args": [
+                "ide",
+                "meson-example",
+                "core-image-minimal",
+                "-c",
+                "--skip-bitbake"
+            ],
+            "cwd": "${workspaceFolder}/build",
+            "envFile": "${workspaceFolder}/build/.buildenv",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: oe-selftest -r devtool.DevtoolIdeTests.test_devtool_ide_recipe_cmake",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/oe-selftest",
+            "args": [
+                "-K",
+                "-v",
+                "-r",
+                "devtool.DevtoolIdeTests.test_devtool_ide_recipe_cmake"
+            ],
+            "cwd": "${workspaceFolder}/build",
+            "envFile": "${workspaceFolder}/build/.buildenv",
+            "console": "integratedTerminal"
+        }
+    ]
+}
