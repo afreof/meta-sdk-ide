@@ -1,0 +1,11 @@
+{
+    "recommendations": [
+        "EditorConfig.EditorConfig",
+        "EugenWiens.bitbake",
+        "maattdd.gitless",
+        "ms-python.isort",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "timonwong.shellcheck",
+    ]
+}
