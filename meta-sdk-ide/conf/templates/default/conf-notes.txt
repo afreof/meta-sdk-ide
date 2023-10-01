@@ -12,3 +12,8 @@ Common targets are:
     meta-ide-support
 
 You can also run generated qemu images with a command like 'runqemu qemux86-64'.
+
+A workspace for the development of the source code of a recipe with VSCode can be set up by:
+    devtool modify cmake-example
+    devtool ide cmake-example core-image-minimal -c
+    vscode $BUILDIR/workspace/sources/cmake-example
