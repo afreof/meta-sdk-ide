@@ -5,7 +5,7 @@
             "name": "Python: bitbake -T-1 --server-only",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/bitbake/bin/bitbake",
+            "program": "${workspaceFolder}/poky/bitbake/bin/bitbake",
             "args": ["-T-1", "--server-only", "-DDD"],
             "cwd": "${workspaceFolder}/build",
             "envFile": "${workspaceFolder}/oe-init-build-env",
@@ -21,14 +21,14 @@
             "justMyCode": true
         },
         {
-            "name": "Python: devtool ide cmake-example core-image-minimal -t root@192.168.7.2 -c --skip-bitbake --debug-build-config",
+            "name": "Python: devtool ide cmake-example oe-selftest-image -c --skip-bitbake --debug-build-config",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/scripts/devtool",
+            "program": "${workspaceFolder}/poky/scripts/devtool",
             "args": [
                 "ide",
                 "cmake-example",
-                "core-image-minimal",
+                "oe-selftest-image",
                 "-c",
                 "--skip-bitbake",
                 "--debug-build-config"
@@ -38,14 +38,14 @@
             "console": "integratedTerminal"
         },
         {
-            "name": "Python: devtool ide meson-example core-image-minimal -t root@192.168.7.2 -c --skip-bitbake",
+            "name": "Python: devtool ide meson-example oe-selftest-image -t root@192.168.7.2 -c --skip-bitbake",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/scripts/devtool",
+            "program": "${workspaceFolder}/poky/scripts/devtool",
             "args": [
                 "ide",
                 "meson-example",
-                "core-image-minimal",
+                "oe-selftest-image",
                 "-c",
                 "--skip-bitbake"
             ],
@@ -57,7 +57,7 @@
             "name": "Python: oe-selftest -r devtool.DevtoolIdeTests.test_devtool_ide_recipe_cmake",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/scripts/oe-selftest",
+            "program": "${workspaceFolder}/poky/scripts/oe-selftest",
             "args": [
                 "-K",
                 "-v",
